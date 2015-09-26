@@ -1,6 +1,8 @@
 require File.expand_path('../boot', __FILE__)
 
 require "rails"
+require 'mongoid'
+require 'rails/mongoid'
 # Pick the frameworks you want:
 require "active_model/railtie"
 require "active_job/railtie"
@@ -13,6 +15,8 @@ require "sprockets/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
+Mongoid.load!(File.expand_path('mongoid.yml','./config'))
+
 Bundler.require(*Rails.groups)
 
 module MESComplain
