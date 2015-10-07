@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     post 'user/sign_in' => 'user#sign_in'
     #get 'user/admin' => 'user#admin'
     get 'user/all' => 'user#get_all_users'
-    post 'user/sign_up'=>'user#sign_up'
+    get 'user/sign_up'=>'user#sign_up'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
